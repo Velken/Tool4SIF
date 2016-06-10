@@ -2,7 +2,7 @@
 
 setlocal EnableExtensions
 
-title Algoritmos 1 - SUPER TOOL!
+title Algoritmos 1 - SUPER TOOL%
 
 color a
 
@@ -15,20 +15,23 @@ echo ===========================================================
 echo.
 
 set /p mode=
-if %mode%==C (
+if /i %mode%==C (
 	goto MenuC 
-) else if %menu%==J (
+) 
+ if /i %mode%==J (
 	goto MenuJ
-) else if NOT %whatapp%==e (
+)
+ if NOT %mode%==e (
 	echo Menu inválido!
 	pause
 )
+goto Menu
 	
 :MenuC
 cls
 echo.
 echo ===========================================================
-echo //  ESTE BAT FUNCIONA APENAS COM OS NOMES JA EXISTENTES! //
+echo //  ESTE BAT FUNCIONA APENAS COM OS NOMES JA EXISTENTES% //
 echo ===========================================================
 echo //  Que exercicio você gostaria de compilar?             //
 echo //  (Digite como está no lado esquerdo da lista)         //
@@ -57,6 +60,14 @@ echo //   20 - Exercicio 20                                   //
 echo //   21 - Exercicio 21                                   //
 echo //   22 - Exercicio 22                                   //
 echo //   22B - Exercicio 22B                                 //
+echo //   23 - Exercicio 23                                   //
+echo //   24 - Exercicio 24                                   //
+echo //   25 - Exercicio 25                                   //
+echo //   26 - Exercicio 26                                   //
+echo //   27 - Exercicio 27                                   //
+echo //   28 - Exercicio 28                                   //
+echo //   29 - Exercicio 29                                   //
+echo //   30 - Exercicio 30                                   //
 echo ===========================================================
 echo //  a - Todos              //  e - Fecha este programa   //
 echo ===========================================================
@@ -161,11 +172,12 @@ if %Co%==a (
 	echo 30/30
 	pause
 	echo Concluido
-) else if %Co%==e (
-	echo ERRO
-) else if NOT %Co%==e (
+)
 	javac Exercicio%Co%.java
 	pause 
+	goto MenuC
+if %co%==e(
+exit
 )
 goto MenuC
 
@@ -198,6 +210,14 @@ echo //   20 - Exercicio 20                                   //
 echo //   21 - Exercicio 21                                   //
 echo //   22 - Exercicio 22                                   //
 echo //   22B - Exercicio 22B                                 //
+echo //   23 - Exercicio 23                                   //
+echo //   24 - Exercicio 24                                   //
+echo //   25 - Exercicio 25                                   //
+echo //   26 - Exercicio 26                                   //
+echo //   27 - Exercicio 27                                   //
+echo //   28 - Exercicio 28                                   //
+echo //   29 - Exercicio 29                                   //
+echo //   30 - Exercicio 30                                   //
 echo ===========================================================
 echo.
 
